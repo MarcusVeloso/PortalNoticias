@@ -1,5 +1,18 @@
-module.exports = function(app){    
-    app.get('/noticias', function(req, res){
-        res.render("noticias/noticias");	
+module.exports = function (app) {
+
+    app.get('/noticias', function (req, res) {
+
+        var mysql = require('mysql');
+
+        var connection = mysql.createConnection({
+            host: 'localhost',
+            user: 'root',
+            password: '123',
+            database: 'db_portal_noticias'
+        });
+
+        connection.query('SELECT * FROM noticias', function (erro, result) {
+            res.render("noticias/noticias", { noticias: result });
+        });
     });
 }
