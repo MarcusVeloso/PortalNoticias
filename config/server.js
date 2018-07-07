@@ -11,6 +11,7 @@ consign()
     .include('app/routes')
     //INFORMA A EXTENSÃO PARA QUE SEJA SELECIONADO APENAS O ARQUIVO
     .then('config/dbConnection.js')
+    .then('app/models')
     .into(app);
 
 module.exports = app;
