@@ -1,7 +1,7 @@
-var dbConnection = require('../../config/dbConnection');
+//var dbConnection = require('../../config/dbConnection');
 
 module.exports = function (app) {
-
+/*
     var connection = dbConnection();
 
     app.get('/noticias', function (req, res) {
@@ -9,5 +9,5 @@ module.exports = function (app) {
         connection.query('SELECT * FROM noticias', function (erro, result) {
             res.render("noticias/noticias", { noticias: result });
         });
-    });
+    });*/
 }
