@@ -10,8 +10,8 @@ NoticiasDAO.prototype.getNoticias = function (callback) {
     this._connection.query('SELECT * FROM noticias', callback);
 }   
 
-NoticiasDAO.prototype.salvarNoticia = function (noticia, callback) {
-    this._connection.query('insert into noticias set ?', noticia, callback);
+NoticiasDAO.prototype.salvarNoticia = function (noticia, callback) {    
+    this._connection.query('insert into noticias set ?', noticia, callback);    
 }
 
 module.exports = function () {
