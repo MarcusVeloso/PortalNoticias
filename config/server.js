@@ -1,10 +1,13 @@
 var express = require('express');
 var consign = require('consign');
-//var dbConnection = require('../../config/dbConnection');
+var bodyParser = require('body-parser');
 
 var app = express();
 app.set('view engine', 'ejs');
-app.set('views','./app/views');
+app.set('views', './app/views');
+
+// INCLUINDO MIDDLEWARE
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // INCLUI O DIRETORIO DENTRO DO APP
 consign()
