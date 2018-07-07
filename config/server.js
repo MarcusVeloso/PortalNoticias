@@ -10,6 +10,8 @@ app.set('views', './app/views');
 // INCLUINDO MIDDLEWARE
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(expressValidator());
+//INCLUI RECURSOS ESTÁTICOS
+app.use(express.static('./app/public'))
 
 // INCLUI O DIRETORIO DENTRO DO APP
 consign()
