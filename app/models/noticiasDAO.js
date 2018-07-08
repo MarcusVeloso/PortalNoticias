@@ -6,6 +6,10 @@ NoticiasDAO.prototype.getNoticia = function (callback) {
     this._connection.query('SELECT * FROM noticias where id_noticias = 2', callback);
 }
 
+NoticiasDAO.prototype.get5UltimasNoticias = function (callback) {    
+    this._connection.query('SELECT * FROM noticias ORDER BY data_criacao desc limit 5', callback);
+}
+
 NoticiasDAO.prototype.getNoticias = function (callback) {
     this._connection.query('SELECT * FROM noticias', callback);
 }   
