@@ -48,27 +48,29 @@
 
 
 	<div class="container">
-		<% for(var i = 0; i < noticias.length; i++) { %>
-			<div class="row">
-				<div class="col-md-12">
-					<div class="noticia_wrapper">
-						<span class="noticia_autor">
-							<%= noticias[i].autor %>
-						</span>
-						<a href="noticia/1" class="noticia_titulo">
-							<%= noticias[i].titulo %>
-						</a>
-						<span class="noticia_data">
-							<%= noticias[i].data_noticias %>
-						</span>
-						<br />
-						<p class="noticia_resumo">
-							<%= noticias[i].noticias %>
-						</p>
+		<% if(noticias.length > 0) { %>
+			<% for(var i = 0; i < noticias.length; i++) { %>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="noticia_wrapper">
+							<span class="noticia_autor">
+								<%= noticias[i].autor %>
+							</span>
+							<a href="noticia/1" class="noticia_titulo">
+								<%= noticias[i].titulo %>
+							</a>
+							<span class="noticia_data">
+								<%= noticias[i].data_noticias %>
+							</span>
+							<br />
+							<p class="noticia_resumo">
+								<%= noticias[i].noticias %>
+							</p>
+						</div>
 					</div>
 				</div>
-			</div>
 			<% } %>
+		<% } %>
 	</div>
 
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
